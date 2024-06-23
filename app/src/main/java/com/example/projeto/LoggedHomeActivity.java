@@ -18,7 +18,7 @@ public class LoggedHomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_loggedhome);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.AnotherMain), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
@@ -31,4 +31,11 @@ public class LoggedHomeActivity extends AppCompatActivity {
 
         startActivity(intent);
     }
+
+    public void goToRegister(View view){
+        Intent intent = new Intent(LoggedHomeActivity.this, RegisterStep02Activity.class);
+
+        startActivity(intent);
+    }
+
 }

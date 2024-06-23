@@ -12,20 +12,24 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class LoginActivity extends AppCompatActivity {
-    private EditText email,password;
+public class RegisterStep01Activity extends AppCompatActivity {
+    private EditText email,age,name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_step01);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.AnotherMain), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
         email = findViewById(R.id.EmailText);
-        password = findViewById(R.id.PasswordText);
+        age = findViewById(R.id.AgeText);
+        name = findViewById(R.id.NameText);
+
+
 
 
         email.setOnFocusChangeListener(new View.OnFocusChangeListener() {
@@ -36,7 +40,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
-        password.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+        name.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 if (!hasFocus) {
@@ -44,6 +48,15 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+        age.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (!hasFocus) {
+                    hideKeyboard(v);
+                }
+            }
+        });
+
 
 
     }
@@ -54,8 +67,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void hideKeyboard(View view) {
-        InputMethodManager inputMethodManager =(InputMethodManager)getSystemService(Activity.INPUT_METHOD_SERVICE);
-        inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        InputMethodManager imm = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
+        imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
     }
 
 

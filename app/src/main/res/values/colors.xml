@@ -8,5 +8,5 @@
     <color name="subtitle">#565656</color>
     <color name="active">#50C2C9</color>
     <color name="secondary">#60C3FC</color>
-
+    <color  name="gray_light">#E0E0E0</color>
 </resources>
