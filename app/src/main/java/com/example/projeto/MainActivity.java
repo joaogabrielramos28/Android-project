@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                     mSLideViewPager.setCurrentItem(getitem(1), true);
                 else {
 
-                    Intent i = new Intent(MainActivity.this, LoginActivity.class);
+                    Intent i = new Intent(MainActivity.this, LoggedHomeActivity.class);
                     startActivity(i);
                     finish();
 
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         skipbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this,LoginActivity.class);
+                Intent i = new Intent(MainActivity.this, LoggedHomeActivity.class);
                 startActivity(i);
                 finish();
 
@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
             setUpindicator(position);
 
             if(position == 4){
-                Intent intent = new Intent(MainActivity.this,LoginActivity.class);
+                Intent intent = new Intent(MainActivity.this, LoggedHomeActivity.class);
 
                 startActivity(intent);
             }
