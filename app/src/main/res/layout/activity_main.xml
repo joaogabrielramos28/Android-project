@@ -73,6 +73,5 @@
         app:layout_constraintStart_toStartOf="@+id/slideViewPager">
 
 
-
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

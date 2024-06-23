@@ -2,14 +2,14 @@
     <string name="app_name">Projeto</string>
 
     //Headings
-    <string name="heading_one">Quick &amp; Easy Payments</string>
-    <string name="heading_two">Instant Notifications</string>
-    <string name="heading_three">Cashless Payment</string>
-    <string name="heading_fourth">Pay Anywhere</string>
+    <string name="heading_one">Reserve Seu Restaurante Favorito</string>
+    <string name="heading_two">Evite Filas e Atrasos </string>
+    <string name="heading_three">Pagamento da Reserva Direto do App</string>
+    <string name="heading_fourth">Aproveite Recomendações Personalizadas</string>
 
     //Description
-    <string name="desc_one">Grow your Business By Accepting Card Payments with The New Card Reader</string>
-    <string name="desc_two">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
-    <string name="desc_three">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
-    <string name="desc_fourth">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
+    <string name="desc_one">Escolha facilmente entre uma vasta seleção de restaurantes e faça sua reserva em poucos toques. Não perca mais tempo ao telefone ou navegando em diversos sites.</string>
+    <string name="desc_two">Chegue e seja atendido imediatamente. Com a reserva antecipada, sua mesa estará pronta quando você chegar, desfrute da sua refeição sem preocupações e aproveite melhor o seu tempo.</string>
+    <string name="desc_three">Pague sua reserva diretamente pelo app de forma rápida e segura. Simplifique sua vida com um pagamento integrado e sem complicações. O valor será estornado na sua conta ao comparecer ao restaurante.</string>
+    <string name="desc_fourth">Receba sugestões personalizadas baseadas nas suas preferências gastronômicas e nas avaliações de outros usuários. Descubra novos restaurantes e experiências incríveis com recomendações feitas especialmente para você.</string>
 </resources>
