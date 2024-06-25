@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".RegisterStep01Activity"
+    tools:context=".RegisterStep03Activity"
     android:clickable="true"
     android:focusableInTouchMode="true"
     >
@@ -17,7 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="84dp"
-        android:text="Dados do usuário"
+        android:text="Endereço"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -31,7 +31,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="40dp"
         android:labelFor="@id/StateTextLayout"
-        android:text="Nome"
+        android:text="Estado"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -41,7 +41,7 @@
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:hint="digite seu nome"
+        android:hint="digite seu estado"
         android:labelFor="@id/textView3"
         android:textColorHint="@color/subtitle"
         app:boxBackgroundColor="@color/white"
@@ -72,7 +72,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="48dp"
-        android:text="E-mail"
+        android:text="Cidade"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/StateTextLayout" />
 
@@ -82,7 +82,7 @@
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:hint="digite seu e-mail"
+        android:hint="digite sua cidade"
         android:labelFor="@id/textView3"
         android:textColorHint="@color/subtitle"
         app:boxBackgroundColor="@color/white"
@@ -112,7 +112,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="40dp"
-        android:text="Idade"
+        android:text="Endereço"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/CityTextLayout" />
 
@@ -122,13 +122,14 @@
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:hint="digite sua idade"
+        android:hint="digite seu endereço"
         android:labelFor="@id/textView3"
         android:textColorHint="@color/subtitle"
         app:boxBackgroundColor="@color/white"
         app:boxBackgroundMode="filled"
         app:boxStrokeColor="@color/active"
         app:endIconMode="none"
+        app:helperText="Ex: Rua X Nº123"
         app:hintTextColor="@color/active"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10">
@@ -138,7 +139,6 @@
             android:id="@+id/AddressText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -154,7 +154,7 @@
         android:layout_marginTop="32dp"
         android:backgroundTintMode="add"
         android:indeterminateOnly="false"
-        android:progress="33"
+        android:progress="100"
         android:progressBackgroundTint="@color/gray_light"
         android:progressBackgroundTintMode="screen"
         android:progressTint="@color/active"
@@ -171,7 +171,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:onClick="onNextStep"
-        android:text="Próximo"
+        android:text="Revisão"
         android:textColor="@color/active"
         android:textColorLink="@color/active"
         app:icon="@drawable/icon_caret_right"
@@ -179,6 +179,24 @@
         app:iconTint="@color/active"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/previous_button"
+        style="@style/Widget.Material3.Button.TextButton.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="goBack"
+        android:text="Voltar"
+        android:textColor="@color/active"
+        android:textColorLink="@color/active"
+        android:visibility="visible"
+        app:icon="@drawable/icon_caret_left"
+        app:iconTint="@color/active"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

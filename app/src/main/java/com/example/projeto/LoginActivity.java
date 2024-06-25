@@ -24,7 +24,7 @@ public class LoginActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        email = findViewById(R.id.EmailText);
+        email = findViewById(R.id.CityText);
         password = findViewById(R.id.PasswordText);
 
 

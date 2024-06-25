@@ -4,11 +4,15 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -30,6 +34,8 @@ public class RegisterActivity extends AppCompatActivity {
     private TextView[] stepIndicators;
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,13 +46,6 @@ public class RegisterActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
-        LayoutInflater inflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View step01 = inflater.inflate(R.layout.activity_step01,containerLayout,false);
-
-
-
-
         containerLayout = findViewById(R.id.container_layout);
         previousButton = findViewById(R.id.previous_button);
         nextButton = findViewById(R.id.next_button);
@@ -58,6 +57,12 @@ public class RegisterActivity extends AppCompatActivity {
         };
         initializeStepIndicators();
         showCurrentStep();
+
+
+
+
+
+
         previousButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,21 +81,6 @@ public class RegisterActivity extends AppCompatActivity {
                 inputMethodManager.hideSoftInputFromWindow(v.getWindowToken(), 0);
             }
         });
-
-
-
-
-
-        stepIndicatorsLayout.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                InputMethodManager inputMethodManager =(InputMethodManager)getSystemService(Activity.INPUT_METHOD_SERVICE);
-                inputMethodManager.hideSoftInputFromWindow(v.getWindowToken(), 0);
-            }
-        });
-
-
-
 
 
         nextButton.setOnClickListener(new View.OnClickListener() {
@@ -119,6 +109,7 @@ public class RegisterActivity extends AppCompatActivity {
     private void showCurrentStep() {
         containerLayout.removeAllViews();
         containerLayout.addView(steps[currentStep]);
+
         previousButton.setVisibility(currentStep > 0 ? View.VISIBLE : View.INVISIBLE);
         nextButton.setText(currentStep < steps.length - 1 ? "Próximo" : "Enviar");
 
@@ -162,6 +153,12 @@ public class RegisterActivity extends AppCompatActivity {
             }
         }
     }
+
+    public void hideKeyboard(View view) {
+        InputMethodManager imm = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
+        imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
+    }
+
 
 }
 

@@ -13,21 +13,20 @@
         android:theme="@style/Theme.Projeto"
         tools:targetApi="31">
         <activity
+            android:name=".ResumeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterStep03Activity"
+            android:exported="false" />
+        <activity
             android:name=".RegisterStep01Activity"
             android:exported="false" />
         <activity
             android:name=".RegisterStep02Activity"
-            android:exported="false"
-
-            />
-        <activity
-            android:name=".RegisterActivity"
-            android:exported="false"
-             />
+            android:exported="false" />
         <activity
             android:name=".LoginActivity"
-            android:exported="false"
-            />
+            android:exported="false" />
         <activity
             android:name=".LoggedHomeActivity"
             android:exported="false" />

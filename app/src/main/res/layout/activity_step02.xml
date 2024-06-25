@@ -5,12 +5,28 @@
     android:id="@+id/AnotherMain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:clickable="true"
-    android:focusableInTouchMode="true"
     android:focusable="auto"
-    tools:context=".RegisterStep02Activity"
+    android:focusableInTouchMode="true"
+    tools:context=".RegisterStep02Activity">
 
-    >
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="216dp"
+        android:layout_height="13dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTintMode="add"
+        android:indeterminateOnly="false"
+        android:progress="66"
+        android:progressBackgroundTint="@color/gray_light"
+        android:progressBackgroundTintMode="screen"
+        android:progressTint="@color/active"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/CardNameLayout"
@@ -137,8 +153,8 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Dados de pagamento"
+        android:layout_marginTop="68dp"
+        android:text="Dados bancários"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -150,7 +166,7 @@
         android:layout_width="372dp"
         android:layout_height="222dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         app:cardBackgroundColor="@color/secondary"
         app:cardCornerRadius="8dp"
@@ -200,8 +216,7 @@
                 android:textSize="24sp"
                 android:textStyle="italic"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/CardNumberText"
-                 />
+                app:layout_constraintTop_toBottomOf="@+id/CardNumberText" />
 
             <TextView
                 android:id="@+id/CardExpireText"
@@ -231,6 +246,40 @@
 
 
     </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/next_button"
+        style="@style/Widget.Material3.Button.TextButton.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="onNextStep"
+        android:text="Próximo"
+        android:textColor="@color/active"
+        android:textColorLink="@color/active"
+        app:icon="@drawable/icon_caret_right"
+        app:iconGravity="end"
+        app:iconTint="@color/active"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/previous_button"
+        style="@style/Widget.Material3.Button.TextButton.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="goBack"
+        android:text="Voltar"
+        android:textColor="@color/active"
+        android:textColorLink="@color/active"
+        android:visibility="visible"
+        app:icon="@drawable/icon_caret_left"
+        app:iconTint="@color/active"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

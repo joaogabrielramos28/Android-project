@@ -33,7 +33,7 @@ public class LoggedHomeActivity extends AppCompatActivity {
     }
 
     public void goToRegister(View view){
-        Intent intent = new Intent(LoggedHomeActivity.this, RegisterStep02Activity.class);
+        Intent intent = new Intent(LoggedHomeActivity.this, RegisterStep01Activity.class);
 
         startActivity(intent);
     }
