@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "4887201843",
+    "project_id": "mesacerta-8f2c8",
+    "storage_bucket": "mesacerta-8f2c8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:4887201843:android:fdaf6d877ef915aaa9bb46",
+        "android_client_info": {
+          "package_name": "com.example.projeto"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCe0RLyafVSoEs7YkQLnQE811zx2r28ElE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

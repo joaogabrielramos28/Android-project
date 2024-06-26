@@ -18,9 +18,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class RegisterStep01Activity extends AppCompatActivity {
-    private EditText email,age,name;
-    private Button nextBtn;
-
+    private EditText email,age,name,password;
     private ProgressBar progressBar;
     public RegisterState formState;
     @Override
@@ -42,7 +40,8 @@ public class RegisterStep01Activity extends AppCompatActivity {
         email = findViewById(R.id.CityText);
         age = findViewById(R.id.AddressText);
         name = findViewById(R.id.StateText);
-        nextBtn = findViewById(R.id.next_button);
+        password = findViewById(R.id.PasswordText);
+
 
         View.OnFocusChangeListener hideKeyboardListener = (v, hasFocus) -> {
             if (!hasFocus) {
@@ -53,12 +52,7 @@ public class RegisterStep01Activity extends AppCompatActivity {
         email.setOnFocusChangeListener(hideKeyboardListener);
         name.setOnFocusChangeListener(hideKeyboardListener);
         age.setOnFocusChangeListener(hideKeyboardListener);
-
-
-
-
-
-
+        password.setOnFocusChangeListener(hideKeyboardListener);
 
 
     }
@@ -75,16 +69,19 @@ public class RegisterStep01Activity extends AppCompatActivity {
 
     public void onNextStep(View view){
 
-        boolean nameSize,ageSize,emailSize;
+        boolean nameSize,ageSize,emailSize,passwordSize;
         nameSize = name.getText().toString().length() == 0;
         ageSize = age.getText().toString().length() == 0;
         emailSize = email.getText().toString().length() == 0;
+        passwordSize = email.getText().toString().length() == 0;
 
-        if(nameSize  || ageSize  || emailSize  ){
+
+
+        if(nameSize || ageSize || emailSize || passwordSize){
             Toast.makeText(this, "Preencha todos os campos para avançar", Toast.LENGTH_SHORT).show();
             return;
         }
-            formState = new RegisterState(name.getText().toString(),email.getText().toString(),Integer.parseInt(age.getText().toString()));
+            formState = new RegisterState(name.getText().toString(),email.getText().toString(),Integer.parseInt(age.getText().toString()),password.getText().toString());
             Intent intent = new Intent(RegisterStep01Activity.this, RegisterStep02Activity.class);
 
             intent.putExtra("data",formState);

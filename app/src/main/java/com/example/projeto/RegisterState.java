@@ -4,17 +4,26 @@ import java.io.Serializable;
 
 public class RegisterState implements Serializable {
 
-    private String name,email,cardNumber,cardName,cardExpires,cardCode,city,state,address;
+    private String name,email,password,cardNumber,cardName,cardExpires,cardCode,city,state,address;
     private Integer age;
 
-    public RegisterState(String name, String email,Integer age) {
+    public RegisterState(String name, String email,Integer age,String password) {
         this.name = name;
         this.email = email;
         this.age = age;
+        this.password = password;
     }
 
     public String getName() {
         return name;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public void setName(String name) {

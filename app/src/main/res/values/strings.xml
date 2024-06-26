@@ -7,6 +7,8 @@
     <string name="heading_three">Pagamento da Reserva Direto do App</string>
     <string name="heading_fourth">Aproveite Recomendações Personalizadas</string>
 
+    <string name="preference_file_key">user_preference</string>
+
     //Description
     <string name="desc_one">Escolha facilmente entre uma vasta seleção de restaurantes e faça sua reserva em poucos toques. Não perca mais tempo ao telefone ou navegando em diversos sites.</string>
     <string name="desc_two">Chegue e seja atendido imediatamente. Com a reserva antecipada, sua mesa estará pronta quando você chegar, desfrute da sua refeição sem preocupações e aproveite melhor o seu tempo.</string>

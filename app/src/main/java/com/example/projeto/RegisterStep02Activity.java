@@ -38,7 +38,7 @@ public class RegisterStep02Activity extends AppCompatActivity {
 
 
         progressBar = findViewById(R.id.progressBar);
-        ObjectAnimator progressAnimator = ObjectAnimator.ofInt(progressBar, "progress", 0, 66);
+        ObjectAnimator progressAnimator = ObjectAnimator.ofInt(progressBar, "progress", 33, 66);
         progressAnimator.setDuration(1000);
         progressAnimator.start();
 
