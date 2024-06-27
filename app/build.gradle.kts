@@ -7,6 +7,8 @@ android {
     namespace = "com.example.projeto"
     compileSdk = 34
 
+
+
     defaultConfig {
         applicationId = "com.example.projeto"
         minSdk = 29
@@ -27,6 +29,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
+
+
 }
 
 dependencies {
@@ -42,4 +47,5 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
     implementation("com.google.android.material:material:1.12.0")
     implementation("com.scwang.wave:MultiWaveHeader:1.0.0-andx")
+    implementation("com.google.code.gson:gson:2.11.0")
 }

@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home_item"
+        android:checkable="true"
+        android:enabled="true"
+        android:icon="@drawable/icon_house"
+        android:title="Home" />
+    <item
+
+        android:id="@+id/reservation_item"
+        android:enabled="true"
+        android:icon="@drawable/icon_calendar"
+        android:title="Reservas"/>
+
+    <item
+        android:id="@+id/profile_item"
+        android:enabled="true"
+        android:icon="@drawable/icon_user"
+        android:title="Perfil"/>
+</menu>

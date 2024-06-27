@@ -2,6 +2,7 @@ package com.example.projeto;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -26,6 +27,10 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.google.gson.Gson;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class LoginActivity extends AppCompatActivity {
     private EditText email,password;
@@ -100,14 +105,20 @@ public class LoginActivity extends AppCompatActivity {
                                                 @Override
                                                 public void onComplete(@NonNull Task<QuerySnapshot> task) {
                                                     if (task.isSuccessful()) {
-
-
                                                         for (QueryDocumentSnapshot document : task.getResult()) {
-
-
-                                                            editor.putString(getString(R.string.preference_file_key),document.getData().toString());
+                                                            Map<String, Object> userData = document.getData();
+                                                            HashMap<String, String> userDataMap = new HashMap<>();
+                                                            for (Map.Entry<String, Object> entry : userData.entrySet()) {
+                                                                userDataMap.put(entry.getKey(), String.valueOf(entry.getValue()));
+                                                            }
+                                                            Gson gson = new Gson();
+                                                            String json = gson.toJson(userDataMap);
+                                                            editor.putString(getString(R.string.preference_file_key),json);
                                                             editor.apply();
                                                         }
+
+                                                        Intent intent = new Intent(LoginActivity.this,HomeActivity.class);
+                                                        startActivity(intent);
                                                     }
                                                 }
                                             });

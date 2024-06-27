@@ -14,4 +14,6 @@
     <string name="desc_two">Chegue e seja atendido imediatamente. Com a reserva antecipada, sua mesa estará pronta quando você chegar, desfrute da sua refeição sem preocupações e aproveite melhor o seu tempo.</string>
     <string name="desc_three">Pague sua reserva diretamente pelo app de forma rápida e segura. Simplifique sua vida com um pagamento integrado e sem complicações. O valor será estornado na sua conta ao comparecer ao restaurante.</string>
     <string name="desc_fourth">Receba sugestões personalizadas baseadas nas suas preferências gastronômicas e nas avaliações de outros usuários. Descubra novos restaurantes e experiências incríveis com recomendações feitas especialmente para você.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

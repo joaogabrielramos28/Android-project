@@ -15,6 +15,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class LoggedHomeActivity extends AppCompatActivity {
 
 
@@ -32,9 +34,11 @@ public class LoggedHomeActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
         String result = sharedPreferences.getString(getString(R.string.preference_file_key), "");
 
+
         if(result.length() > 0){
             Intent intent = new Intent(LoggedHomeActivity.this,HomeActivity.class);
             startActivity(intent);
+
         }
 
 
