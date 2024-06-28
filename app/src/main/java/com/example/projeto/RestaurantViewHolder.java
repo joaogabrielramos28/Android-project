@@ -16,7 +16,7 @@ public class RestaurantViewHolder  extends RecyclerView.ViewHolder {
         description = itemView.findViewById(R.id.restaurantDesc);
         category = itemView.findViewById(R.id.restaurantCategory);
         rating = itemView.findViewById(R.id.restaurantRating);
-        photo = itemView.findViewById(R.id.restaurantImg);
+        photo = itemView.findViewById(R.id.reservationImg);
 
 
     }

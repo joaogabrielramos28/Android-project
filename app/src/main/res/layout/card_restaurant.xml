@@ -24,7 +24,7 @@
             android:layout_height="match_parent">
 
             <com.example.projeto.RoundRectCornerImageView
-                android:id="@+id/restaurantImg"
+                android:id="@+id/reservationImg"
                 android:layout_width="86dp"
                 android:layout_height="79dp"
                 android:layout_marginStart="8dp"
@@ -45,7 +45,7 @@
                 android:layout_marginTop="16dp"
                 android:text="TextView"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/restaurantImg"
+                app:layout_constraintStart_toEndOf="@+id/reservationImg"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -64,7 +64,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/restaurantImg"
+                app:layout_constraintStart_toEndOf="@+id/reservationImg"
                 app:layout_constraintTop_toBottomOf="@+id/restaurantName"
                 app:layout_constraintVertical_bias="0.0" />
 
@@ -79,7 +79,7 @@
                 android:textSize="10sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/restaurantImg"
+                app:layout_constraintStart_toEndOf="@+id/reservationImg"
                 app:layout_constraintTop_toBottomOf="@+id/restaurantDesc" />
 
             <ImageView

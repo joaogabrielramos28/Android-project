@@ -6,13 +6,13 @@ import android.os.Parcelable;
 import com.google.firebase.firestore.GeoPoint;
 
 public class Restaurant implements Parcelable {
-    private String name, address, photo, description, category,descriptionDetails;
+    private String name, address, photo, description, category,descriptionDetails,id;
     private Double rate,lat, longi;
 
 
 
 
-    public Restaurant(String name, String address, String photo, Double rate, String description, String category, String descriptionDetails, Double lat, Double longi) {
+    public Restaurant(String name, String address, String photo, Double rate, String description, String category, String descriptionDetails, Double lat, Double longi,String id) {
         this.name = name;
         this.address = address;
         this.photo = photo;
@@ -22,6 +22,15 @@ public class Restaurant implements Parcelable {
         this.descriptionDetails = descriptionDetails;
         this.lat = lat;
         this.longi = longi;
+        this.id = id;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public Double getLat() {
@@ -104,6 +113,7 @@ public class Restaurant implements Parcelable {
         description = in.readString();
         category = in.readString();
         descriptionDetails = in.readString();
+        id = in.readString();
 
 
         if (in.readByte() == 0) {
@@ -133,6 +143,7 @@ public class Restaurant implements Parcelable {
         dest.writeString(description);
         dest.writeString(category);
         dest.writeString(descriptionDetails);
+        dest.writeString(id);
 
         if (rate == null) {
             dest.writeByte((byte) 0);

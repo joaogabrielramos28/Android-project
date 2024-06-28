@@ -42,7 +42,6 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantViewHolder
     @Override
     public void onBindViewHolder(@NonNull RestaurantViewHolder holder, int position) {
         Restaurant restaurant = items.get(position);
-        Uri uri = Uri.parse("https://images.freeimages.com/images/large-previews/3ff/chain-link-fence-1187948.jpg");
 
 
         holder.name.setText(restaurant.getName());

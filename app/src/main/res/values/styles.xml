@@ -77,4 +77,8 @@
         <item name="cornerSizeBottomRight">0dp</item>
     </style>
 
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/secondary</item>
+    </style>
+
 </resources>
