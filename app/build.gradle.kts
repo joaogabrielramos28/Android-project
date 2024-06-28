@@ -50,4 +50,5 @@ dependencies {
     implementation("com.scwang.wave:MultiWaveHeader:1.0.0-andx")
     implementation("com.google.code.gson:gson:2.11.0")
     implementation("com.squareup.picasso:picasso:2.71828")
+    implementation("androidx.core:core-splashscreen:1.0.0")
 }
