@@ -129,6 +129,7 @@ public class LoginActivity extends AppCompatActivity {
                                             });
                                 }else{
                                     Toast.makeText(LoginActivity.this, "Credenciais inválidas", Toast.LENGTH_SHORT).show();
+                                    pd.dismiss();
                                 }
                             }
                         });

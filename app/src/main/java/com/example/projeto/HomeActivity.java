@@ -91,7 +91,6 @@ public class HomeActivity extends AppCompatActivity {
             public void run() {
                 mAuth.signOut();
                 editor.clear().commit();
-                // Reinicia a activity para garantir que as mudanças sejam aplicadas
                 Intent intent = new Intent(HomeActivity.this,LoggedHomeActivity.class);
                 startActivity(intent);
             }
