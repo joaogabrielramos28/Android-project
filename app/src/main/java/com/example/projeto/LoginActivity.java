@@ -1,6 +1,7 @@
 package com.example.projeto;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -35,6 +36,7 @@ import java.util.Map;
 public class LoginActivity extends AppCompatActivity {
     private EditText email,password;
     private FirebaseAuth mAuth;
+    private ProgressDialog pd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,6 +88,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
     public void SignIn(View view){
+        pd=ProgressDialog.show(LoginActivity.this,"Carregando","Por favor aguarde",false);
         SharedPreferences sharedPref = LoginActivity.this.getSharedPreferences(
                 getString(R.string.preference_file_key), Context.MODE_PRIVATE);
 
@@ -116,6 +119,8 @@ public class LoginActivity extends AppCompatActivity {
                                                             editor.putString(getString(R.string.preference_file_key),json);
                                                             editor.apply();
                                                         }
+
+                                                        pd.dismiss();
 
                                                         Intent intent = new Intent(LoginActivity.this,HomeActivity.class);
                                                         startActivity(intent);

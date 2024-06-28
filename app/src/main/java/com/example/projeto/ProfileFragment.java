@@ -1,6 +1,7 @@
 package com.example.projeto;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
@@ -98,4 +99,21 @@ View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
 
     }
+
+    public void deleteAccount(View view){
+        SharedPreferences sharedPref = getActivity().getSharedPreferences(
+                getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+
+        getActivity().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                editor.clear().commit();
+                mAuth.getCurrentUser().delete();
+                Intent intent = new Intent(getActivity(),LoggedHomeActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
 }

@@ -42,10 +42,12 @@ dependencies {
     implementation(libs.constraintlayout)
     implementation(libs.firebase.auth)
     implementation(libs.firebase.firestore)
+    implementation(libs.play.services.maps)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
     implementation("com.google.android.material:material:1.12.0")
     implementation("com.scwang.wave:MultiWaveHeader:1.0.0-andx")
     implementation("com.google.code.gson:gson:2.11.0")
+    implementation("com.squareup.picasso:picasso:2.71828")
 }

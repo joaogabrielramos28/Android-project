@@ -84,7 +84,6 @@ public class HomeActivity extends AppCompatActivity {
     public void signOut(View view) {
         SharedPreferences sharedPref = getSharedPreferences(
                 getString(R.string.preference_file_key), Context.MODE_PRIVATE);
-
         SharedPreferences.Editor editor = sharedPref.edit();
 
         runOnUiThread(new Runnable() {
@@ -92,11 +91,12 @@ public class HomeActivity extends AppCompatActivity {
             public void run() {
                 mAuth.signOut();
                 editor.clear().commit();
-
                 // Reinicia a activity para garantir que as mudanças sejam aplicadas
                 Intent intent = new Intent(HomeActivity.this,LoggedHomeActivity.class);
                 startActivity(intent);
             }
         });
     }
+
+
 }
