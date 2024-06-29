@@ -47,7 +47,6 @@
         app:boxBackgroundColor="@color/white"
         app:boxBackgroundMode="filled"
         app:boxStrokeColor="@color/active"
-        app:endIconMode="clear_text"
         app:hintTextColor="@color/active"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7">
@@ -88,7 +87,6 @@
         app:boxBackgroundColor="@color/white"
         app:boxBackgroundMode="filled"
         app:boxStrokeColor="@color/active"
-        app:endIconMode="clear_text"
         app:hintTextColor="@color/active"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9">

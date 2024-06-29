@@ -6,7 +6,9 @@ import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -56,6 +58,7 @@ public class RestaurantDetailsActivity extends AppCompatActivity implements  OnM
     DatePickerDialog datePickerDialog;
     TimePickerDialog timePickerDialog;
     private FirebaseAuth mAuth;
+    private ImageButton goBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,6 +78,8 @@ public class RestaurantDetailsActivity extends AppCompatActivity implements  OnM
         hour = findViewById(R.id.Hour);
         calendar = Calendar.getInstance();
         mAuth = FirebaseAuth.getInstance();
+        goBack = findViewById(R.id.goBackBtn);
+
         timePickerDialog = new TimePickerDialog(this,new TimePickerDialog.OnTimeSetListener() {
             @Override
             public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
@@ -134,11 +139,16 @@ public class RestaurantDetailsActivity extends AppCompatActivity implements  OnM
             }
         });
 
+        goBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
     }
 
-    private void onGoBack(View view){
-        this.finish();
-    }
+
 
 
     @Override
@@ -186,15 +196,15 @@ public class RestaurantDetailsActivity extends AppCompatActivity implements  OnM
     }
     @Override
     protected void onPause() {
-        map.onPause();
+        super.onPause();
+
         if (map != null) {
-            super.onPause();
+            map.onPause();
         }
 
     }
     @Override
     protected void onDestroy() {
-
         super.onDestroy();
         if (map != null) {
             map.onDestroy();
@@ -204,7 +214,10 @@ public class RestaurantDetailsActivity extends AppCompatActivity implements  OnM
     @Override
     public void onLowMemory() {
         super.onLowMemory();
+        if (map != null) {
             map.onDestroy();
+        }
+
 
     }
     public void showDialog(Bundle savedInstanceState) {

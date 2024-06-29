@@ -73,7 +73,7 @@ public class RegisterStep01Activity extends AppCompatActivity {
         nameSize = name.getText().toString().length() == 0;
         ageSize = age.getText().toString().length() == 0;
         emailSize = email.getText().toString().length() == 0;
-        passwordSize = email.getText().toString().length() == 0;
+        passwordSize = password.getText().toString().length() == 0;
 
 
 
